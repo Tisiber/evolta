@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* 52framework CSS Framework for Mobile Devices */
+
+body { font-size:12px;}
+
+@media screen and (max-width: 320px)
+{
+}
+ 
+@media screen and (min-width: 321px)
+{
+}

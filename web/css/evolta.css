@@ -1,0 +1,15 @@
+
+body#home {}
+
+div.container { width:980px; margin:0 auto; }
+header#header { padding-bottom:10px; border-bottom:1px solid #FC7324; }
+div.main      { padding: 130px 15px 100px; background: transparent url('/images/evolta_slogan.jpg') left top no-repeat; }
+div.main      { padding: 15px 15px 100px; background: none; }
+footer#footer { padding:15px 15px 50px; background:#666; color:#FFF; }
+
+header#header nav.menu ul li { float:right; padding:0 10px; border-right:1px dotted; }
+
+
+footer#footer #companyinfo,
+footer#footer #contactinfo { float:left; width:70%; font-weight:bold; }
+footer#footer #contactinfo { width:30%; }

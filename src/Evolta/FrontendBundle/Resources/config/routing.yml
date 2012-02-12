@@ -1,0 +1,9 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: FrontendBundle:Default:index }
+    
+staticpage:
+    pattern:  /{page}/
+    defaults: { _controller: FrontendBundle:Default:static }
+    requirements:
+        page: aseguradoras|comunidades|empresas|acceso-usuarios|contacto

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>{% block title %}Evolta Gestión de Servicios{% endblock %}</title>
+
+        <meta name="description" content="{% block metadesc %}Evolta Gestión de Servicios{% endblock %}" />
+        <meta name="keywords" content="{% block metakey %}Evolta Gestión de Servicios{% endblock %}">
+
+        {% block stylesheets %}{% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/css3.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/general.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/evolta.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/mobile.css" media="screen" />
+
+        <link type="image/x-icon" rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body id="{% block pageid '' %}" class="frontend" >
+
+        <div class="container"  >
+            <header id="header" >
+                    {% block nav %}{% endblock %}
+            </header>
+
+            <div class="main">
+                {% block main %}{% endblock %}
+            </div>
+
+        </div>
+
+        <footer id="footer" >
+            <div class="container"  >
+                {% block footer %}{% endblock %}
+            </div>
+        </footer>
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+
+</html>
