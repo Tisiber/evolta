@@ -1,8 +1,8 @@
-{% extends "::frontend.html.twig" %}
+{% extends "::base.html.twig" %}
 
 {% block nav %}
 
-    {% include 'FrontendBundle:Default:login.html.twig' %}
+    {% include 'FrontendBundle:Default:_login.html.twig' %}
 
     <a id="link_logo_header" href="{{ path('homepage') }}" alt="Evolta Gestión de Servicios"><img id="logo_header" src="/images/logo.jpg"/></a>
     <div class="clear"> </div>

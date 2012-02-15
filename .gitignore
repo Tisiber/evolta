@@ -13,6 +13,7 @@ vendor/*
 
 # directorio uploads
 web/uploads/*
+web/css/*
 
 # archivos creados por los IDEs Eclipse, Zend Studio, Netbeans y PHPStorm
 .buildpath
@@ -20,3 +21,6 @@ web/uploads/*
 .settings
 nbproject
 .idea
+
+#archivos temporales creados por JOE
+*~

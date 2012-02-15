@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* 52framework CSS Framework for Mobile Devices */
+
+
+@media screen and (max-width: 480px)
+{
+    body { font-size:22px; }
+
+    #login-container.hover-login { border:1px solid #666; }
+    
+    footer#footer #companyinfo { line-height:1em; }
+
+    footer#footer nav.menu ul li { padding:5px; display:list-item; }
+    footer#footer nav.menu ul { margin-bottom:30px; }
+}

@@ -1,0 +1,85 @@
+                Configuraración proyecto
+---------------------------------------------------------
+
+
+//////////////
+// Servidor //
+//////////////
+<VirtualHost *:80>
+    DocumentRoot "/var/www/project_dir"
+    DirectoryIndex app.php
+    
+    <Directory "/var/www/project_dir">
+        AllowOverride All
+        Allow from All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/project-error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog ${APACHE_LOG_DIR}/project-access.log combined
+
+    php_flag short_open_tag off
+    php_value date.timezone "Europe/Madrid"
+</VirtualHost>
+
+
+//////////////
+// SYMFONY2 //
+//////////////
+Configuración permisos de cache y log: 'chmod -R 777 app/cache app/logs'
+Más configuración sobre cache y log:
+http://symfony.com/doc/2.0/book/installation.html#configuration-and-setup
+
+Ejecutar en consola 'php app/check.php' y solucionar los problemas que se muestren
+(la configuración del servidor debe cumplir con los requisitos de Symfony2).
+
+Comandos por consola que pueden solucionar algunos de los problemas:
+1) 'php vendor/bundles/Sensio/Bundle/DistributionBundle/Resources/bin/build_bootstrap.php'
+Crea un archivo PHP con el código de todas las clases de la aplicación. Se trata de un 
+archivo gigantesco que acelera la ejecución de Symfony2 y que se debe recrear cada vez que 
+se actualiza el framework.
+2) 'php app/console assets:install web'
+Copia en el directorio público del proyecto los archivos CSS, JavaScript e imágenes del 
+propio framework y de la aplicación.
+3) 'php app/console cache:clear --no-warmup'
+Borra la caché de la aplicación. Este comando sólo es necesario cuando se actualiza el 
+framework, no cuando se instala por primera vez.
+
+Prueba: El comando 'php app/console' debe ejecutarse correctamente.
+Prueba: El comando 'php app/console cache:clear' debe ejecutarse correctamente
+
+Configuración recomendada php.ini:
+• short_open_tags: off
+• magic_quotes_gpc: off
+• register_globals: off
+• session.autostart: off
+
+
+///////////////////////////////////////////
+// Configuración específica del proyecto //
+///////////////////////////////////////////
+Crear y configurar /app/config/parameteres.ini:
+; These parameters can be imported into other config files
+; by enclosing the key with % (like %database_user%)
+; Comments start with ';', as in php.ini[parameters]
+    ;ejemplo configuración base de datos con mysql
+    database_driver="pdo_mysql"
+    database_host="localhost"
+    database_port=""
+    database_name="evolta"
+    database_user="root"
+    database_password=""
+    mailer_transport="smtp"
+    mailer_host="localhost"
+    mailer_user=""
+    mailer_password=""
+    locale="es"
+    secret="a8ada4a18f86b726e7bfdcd01df1058a1"
+
+Las hojas de estilo CSS se minimizan con un filtro llamado yui_css que utiliza
+la librería YUI compressor de Yahoo!
+YUI compressor es una aplicación Java. Java debe estar instalado en el servidor.
