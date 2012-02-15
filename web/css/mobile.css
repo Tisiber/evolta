@@ -1,12 +1,23 @@
 @charset "UTF-8";
 /* 52framework CSS Framework for Mobile Devices */
 
-body { font-size:12px;}
 
 @media screen and (max-width: 320px)
 {
+    body { font-size:18px; font-weight:bold; }
+
+    li { font-size:22px; padding:5px !important; display:list-item !important; }
+    ul { margin-bottom:30px !important; }
 }
  
 @media screen and (min-width: 321px)
 {
+    body { font-size:22px; }
+
+    #login-container.hover-login { border:1px solid #666; }
+    
+    footer#footer #companyinfo { line-height:1em; }
+
+    li { padding:5px !important; display:list-item !important; }
+    ul { margin-bottom:30px !important; }
 }

@@ -13,7 +13,7 @@ class DefaultController extends Controller
         
         return $this->render('FrontendBundle:Default:index.html.twig',
                 array(
-                    'name' => ''
+                    'content' => ''
         ));
     }
     
@@ -21,7 +21,7 @@ class DefaultController extends Controller
         
         return $this->render("FrontendBundle:Default:{$page}.html.twig",
                 array(
-                    'name' => ''
+                    'content' => ''
         ));
     }
 }

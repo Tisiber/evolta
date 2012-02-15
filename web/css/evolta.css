@@ -1,15 +1,33 @@
 
 body#home {}
 
-div.container { width:980px; margin:0 auto; }
-header#header { padding-bottom:10px; border-bottom:1px solid #FC7324; }
-div.main      { padding: 130px 15px 100px; background: transparent url('/images/evolta_slogan.jpg') left top no-repeat; }
-div.main      { padding: 15px 15px 100px; background: none; }
-footer#footer { padding:15px 15px 50px; background:#666; color:#FFF; }
-
-header#header nav.menu ul li { float:right; padding:0 10px; border-right:1px dotted; }
+div.container { width:100%; max-width:980px; margin:0 auto; }
+div.container header#header { padding:10px; border-bottom:1px solid #FC7324; }
+div.container div.main      { padding: 15px 15px 100px; min-height:400px; background: none; }
+div.container footer#footer { padding:15px; border-top:5px solid #FC7324;}
 
 
-footer#footer #companyinfo,
-footer#footer #contactinfo { float:left; width:70%; font-weight:bold; }
-footer#footer #contactinfo { width:30%; }
+
+/**********/
+/* header */
+/**********/
+header#header #link_logo_header { float:right; }
+header#header #link-acceso-usuarios { float:left; width:100%; text-decoration:none; }
+header#header #link-acceso-usuarios:hover { text-decoration:none; }
+header#header #link-acceso-usuarios span { float:right; }
+
+#login-container { position:absolute; top:50px; padding:10px 10px 0; }
+#login-container.hover-login { padding-bottom:10px; box-shadow:0 0 8px #AAAAAA; background-color:#FFFFFF; }
+#form-login { float:left; clear:both; padding: 5px; }
+
+
+/**********/
+/* footer */
+/**********/
+footer#footer nav.menu { margin-bottom:10px; }
+footer#footer nav.menu ul { text-align:right; margin-bottom:10px; }
+footer#footer nav.menu ul li { afloat:right; padding:0 10px; display:inline; border-right:1px dotted; color:#FF006A; }
+footer#footer nav.menu ul li a { font-weight:bold; color:#FF006A; white-space:nowrap; }
+
+footer#footer #companyinfo { clear:both; margin-top:10px; font-weight:bold; line-height:16px; }
+footer#footer #contactinfo { clear:both; margin-top:10px; }
