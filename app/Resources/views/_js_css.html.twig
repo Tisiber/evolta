@@ -1,18 +1,6 @@
 {% if app.environment == "prod" %}
-
+   
 {#
-    {% stylesheets  output='css/main.css'
-                    '@FrontendBundle/Resources/public/css/reset.css'
-                    '@FrontendBundle/Resources/public/css/general.css'
-                    '@FrontendBundle/Resources/public/css/evolta.css'
-                    '@FrontendBundle/Resources/public/css/css3.css'
-                    '@FrontendBundle/Resources/public/css/mobile.css'
-                    filter='yui_css'
-                    debug=false %}
-
-        <link href="{{ asset_url }}" rel="stylesheet" type="text/css" media="screen" />
-    {% endstylesheets %}
-#}
     {% stylesheets  '@FrontendBundle/Resources/public/css/reset.css'
                     '@FrontendBundle/Resources/public/css/general.css'
                     '@FrontendBundle/Resources/public/css/evolta.css'
@@ -22,6 +10,13 @@
 
         <link href="{{ asset_url }}" rel="stylesheet" type="text/css" media="screen" />
     {% endstylesheets %}
+#}
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/reset.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/general.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/evolta.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/css3.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/mobile.css') }}" media="only screen and (max-device-width: 480px)" />
 
     <link type="image/x-icon" rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
 
