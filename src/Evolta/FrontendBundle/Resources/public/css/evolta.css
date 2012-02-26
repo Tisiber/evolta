@@ -28,7 +28,7 @@ header#header #link_logo_header { float:right; }
 /**********/
 footer#footer nav.menu { margin-bottom:10px; }
 footer#footer nav.menu ul { text-align:right; margin-bottom:10px; }
-footer#footer nav.menu ul li { afloat:right; padding:0 10px; display:inline; border-right:1px dotted; color:#FF006A; }
+footer#footer nav.menu ul li { padding:0 10px; display:inline; border-right:1px dotted; color:#FF006A; }
 footer#footer nav.menu ul li a { font-weight:bold; color:#FF006A; white-space:nowrap; }
 
 footer#footer #companyinfo { clear:both; margin-top:10px; font-weight:bold; line-height:16px; }
