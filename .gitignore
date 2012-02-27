@@ -12,6 +12,7 @@ app/logs/*
 vendor/*
 
 # directorio uploads
+web/bundles/*
 web/uploads/*
 web/css/*
 
