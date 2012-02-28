@@ -1,10 +1,9 @@
 @charset "UTF-8";
-/* 52framework CSS Framework for Mobile Devices */
-
 
 @media screen and (max-width: 320px)
 {
-    body { font-size:0.8em; }
+    body { font-size:22px; }
+    #link-acceso-usuarios {font-size:22px}
 
     #login-container.hover-login { border:1px solid #666; }
     
@@ -15,9 +14,10 @@
     footer#footer nav.menu ul { margin:0 0 30px; text-align:left;  }
 }
 
-@media screen and (min-width: 321px) and (max-width: 480px)
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation:portrait)
 {
-    body { font-size:0.8em; }
+    body { font-size:20px; }
+    #link-acceso-usuarios {font-size:20px}
     
     #login-container.hover-login { border:1px solid #666; }
     
@@ -25,14 +25,43 @@
     footer#footer #contactinfo { float:right; text-align:right; }
 
     footer#footer nav.menu ul li { padding:5px; display:list-item; border-right:0; border-left:1px dotted; }
-    footer#footer nav.menu ul { margin:0 0 30px; text-align:left;  }
+    footer#footer nav.menu ul { margin:0 0 30px; text-align:left; }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation:landscape)
+{
+    body { font-size:16px; }
+    #link-acceso-usuarios {font-size:16px}
+    
+    #login-container.hover-login { border:1px solid #666; }
+    
+    footer#footer #companyinfo { float:right; text-align:right; line-height:1em; }
+    footer#footer #contactinfo { float:right; text-align:right; }
+
+    footer#footer nav.menu ul li { padding:5px; display:list-item; border-right:0; border-left:1px dotted; }
+    footer#footer nav.menu ul { margin:0 0 30px; text-align:left; }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px)
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation:portrait)
 {
-    body { font-size:0.8em; }
+    body { font-size:18px; }
+    #link-acceso-usuarios {font-size:18px}
     
-    div.container div.main      { min-height:300px; }
+    div.container div.main { min-height:300px; }
+
+    #login-container.hover-login { border:1px solid #666; }
+    
+    footer#footer #companyinfo { float:right; text-align:right; line-height:1em; }
+    footer#footer #contactinfo { float:right; text-align:right; }
+
+    footer#footer nav.menu ul li { padding:10px; display:list-item; border-right:0; border-left:1px dotted; }
+    footer#footer nav.menu ul { margin:0 0 30px; text-align:left;  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation:landscape)
+{
+    body { font-size:16px; }
+    #link-acceso-usuarios {font-size:16px}
+    
+    div.container div.main { min-height:300px; }
 
     #login-container.hover-login { border:1px solid #666; }
     
@@ -44,15 +73,33 @@
 }
 
 /* ipad */  
-@media screen and (min-width: 769px) and (max-width: 1024px)
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation:portrait)
 {
-    body { font-size:0.8em; }
+    body { font-size:18px; }
+    #link-acceso-usuarios {font-size:18px}
     
-    div.container div.main      { min-height:300px; }
+    div.container div.main { min-height:300px; }
 
     #login-container.hover-login { border:1px solid #666; }
     
-    footer#footer #companyinfo { line-height:1em; }
+    footer#footer #companyinfo { float:right; text-align:right; line-height:1em; }
+    footer#footer #contactinfo { float:right; text-align:right; }
 
-    footer#footer nav.menu ul { margin-bottom:30px; }
+    footer#footer nav.menu ul li { padding:10px; display:list-item; border-right:0; border-left:1px dotted; }
+    footer#footer nav.menu ul { margin:0 0 30px; text-align:left;  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation:landscape)
+{
+    body { font-size:16px; }
+    #link-acceso-usuarios {font-size:16px}
+    
+    div.container div.main { min-height:300px; }
+
+    #login-container.hover-login { border:1px solid #666; }
+    
+    footer#footer #companyinfo { float:right; text-align:right; line-height:1em; }
+    footer#footer #contactinfo { float:right; text-align:right; }
+
+    footer#footer nav.menu ul li { padding:5px; display:list-item; border-right:0; border-left:1px dotted; }
+    footer#footer nav.menu ul { margin:0 0 30px; text-align:left;  }
 }
