@@ -12,15 +12,18 @@ div.container footer#footer { padding:15px; border-top:5px solid #FC7324;}
 /**********/
 /* header */
 /**********/
-header#header #link_logo_header { float:right; }
+header#header #link_logo_header { float:left; }
 
-#login-container { position:absolute; top:1.5em; padding:10px 10px 0; }
-#login-container.hover-login { padding-bottom:10px; box-shadow:0 0 8px #AAAAAA; background-color:#FFFFFF; }
+#login-container { float:right; margin-top:15px; width:180px; }
+#login-container.hover-login { padding-bottom:10px; background-color:#FFFFFF; }
 
-#login-container #link-acceso-usuarios { float:left; width:100%; text-decoration:none; }
+#login-container #link-acceso-usuarios { display:block; width:100%; text-align:right; text-decoration:none; }
 #login-container #link-acceso-usuarios:hover { text-decoration:none; }
-#login-container #link-acceso-usuarios span { float:right; }
-#login-container #form-login { float:left; clear:both; padding: 5px; }
+#login-container #link-acceso-usuarios span { float:left; padding-left:5px; }
+#login-container #capa-form-login { position:absolute; padding:10px; width:160px; }
+#login-container.hover-login #capa-form-login { box-shadow: 0 0 8px #AAAAAA; background-color:#FFF; }
+#login-container #form-login { margin-top:10px; }
+#login-container #form-login .textinput { width:150px; }
 
 
 /**********/

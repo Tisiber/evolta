@@ -1,10 +1,11 @@
 <div id="login-container">
 {#<div id="login-container" class="hover-login">#}
 
-    <a id="link-acceso-usuarios" href="http://www.atm.neway.es/atm_construction/">Acceso Usuarios <span class="hide">X</span></a>
+    <div id="capa-form-login">
 
-    <div id="form-login" class="hide">
-        <form method="post" action="http://www.atm.neway.es/atm_construction/">
+        <a id="link-acceso-usuarios" href="http://www.atm.neway.es/atm_construction/"><span class="hide">X</span> Acceso Usuarios</a>
+        
+        <form id="form-login" method="post" action="http://www.atm.neway.es/atm_construction/" class="hide">
             <p>
                 Empresa<br/>
                 <input type="text" tabindex="1" class="textinput" name="company" size="15">
