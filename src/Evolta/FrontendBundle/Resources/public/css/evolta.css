@@ -5,7 +5,7 @@ body {}
 div.container { width:100%; max-width:980px; margin:0 auto; }
 div.container header#header { padding:10px; border-bottom:1px solid #FC7324; height:3em; }
 div.container div.main      { padding: 15px 15px 100px; min-height:400px; background: none; }
-div.container footer#footer { padding:15px; border-top:5px solid #FC7324;}
+div.container footer#footer { padding:15px; border-top:1px solid #AAAAAA;}
 
 
 
@@ -14,15 +14,15 @@ div.container footer#footer { padding:15px; border-top:5px solid #FC7324;}
 /**********/
 header#header #link_logo_header { float:left; }
 
-#login-container { float:right; margin-top:15px; width:180px; }
-#login-container.hover-login { padding-bottom:10px; background-color:#FFFFFF; }
+#login-container { position:absolute; margin-left: 790px;  margin-top:15px; padding-right:10px; width:180px; }
+#login-container.hover-login { padding-top:10px; padding-bottom:10px; margin-top:5px; background-color:#FFFFFF; }
 
-#login-container #link-acceso-usuarios { display:block; width:100%; text-align:right; text-decoration:none; }
+#login-container #link-acceso-usuarios { float:right; width:100%; text-align:right; text-decoration:none; }
 #login-container #link-acceso-usuarios:hover { text-decoration:none; }
 #login-container #link-acceso-usuarios span { float:left; padding-left:5px; }
-#login-container #capa-form-login { position:absolute; padding:10px; width:160px; }
-#login-container.hover-login #capa-form-login { box-shadow: 0 0 8px #AAAAAA; background-color:#FFF; }
-#login-container #form-login { margin-top:10px; }
+#login-container #capa-form-login { float:right; padding:10px; width:160px; }
+#login-container.hover-login #capa-form-login { float:right; box-shadow: 0 0 8px #AAAAAA; background-color:#FFF; }
+#login-container #form-login { margin-left:5px; margin-top:5px; }
 #login-container #form-login .textinput { width:150px; }
 
 
@@ -30,9 +30,10 @@ header#header #link_logo_header { float:left; }
 /* footer */
 /**********/
 footer#footer nav.menu { margin-bottom:10px; }
-footer#footer nav.menu ul { text-align:right; margin-bottom:10px; }
-footer#footer nav.menu ul li { padding:0 10px; display:inline; border-right:1px dotted; color:#FF006A; }
-footer#footer nav.menu ul li a { font-weight:bold; color:#FF006A; white-space:nowrap; }
+footer#footer nav.menu ul { text-align:right; margin-bottom:10px; color:#AAAAAA;}
+footer#footer nav.menu ul li { padding:0 10px; display:inline; border-right:1px dotted; color:#AAAAAA; }
+footer#footer nav.menu ul li a { font-weight:bold; color:#AAAAAA; white-space:nowrap; }
+footer#footer nav.menu ul li a:hover { color: #FC7324;}
 
-footer#footer #companyinfo { clear:both; margin-top:10px; font-weight:bold; line-height:16px; }
-footer#footer #contactinfo { clear:both; margin-top:10px; }
+footer#footer #companyinfo { clear:both; margin-top:10px; font-weight:normal; color:#AAAAAA; line-height:16px; }
+footer#footer #contactinfo { clear:both; margin-top:-25px; color:#AAAAAA;}

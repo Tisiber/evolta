@@ -1,0 +1,57 @@
+{% extends "::base.html.twig" %}
+
+{% block nav %}
+
+    {% include 'FrontendBundle:Default:_login.html.twig' %}
+
+    <a id="link_logo_header" href="{{ path('homepage') }}" alt="Evolta Gestión de Servicios"><img id="logo_header" src="/images/logo.jpg"/></a>
+    <div class="clear"> </div>
+
+{% endblock %}
+    
+{% block footer %}
+    <nav class="menu">
+        <ul>
+            {#<li><a href="{{ path('homepage') }}">Inicio</a></li>#}
+            <li><a href="{{ path('staticpage', { 'page': 'nosotros'}) }}">Nosotros</a></li>
+            <li><a href="{{ path('staticpage', { 'page': 'empresas'}) }}">Empresas</a></li>
+            <li><a href="{{ path('staticpage', { 'page': 'comunidades'}) }}">Comunidades</a></li>
+            <li><a href="{{ path('staticpage', { 'page': 'aseguradoras'}) }}">Aseguradoras</a></li>
+            <li><a href="{{ path('staticpage', { 'page': 'particulares'}) }}">Particulares</a></li> 
+            <li><a href="{{ path('staticpage', { 'page': 'contacto'}) }}">Contacto</a></li>
+        </ul>
+        <div class="clear"> </div>
+    </nav>
+
+    <div id="contactinfo">
+        <strong>Contacto</strong><br />
+         902 20 38 68<br />
+        correo@evolta.es
+    </div>
+
+    <div id="companyinfo">
+        Evolta Gestión de Servicios, S.L.
+        <br />
+        Pº Castellana 141 - 28046 Madrid
+        <br />
+        ® 2008 Todos los derechos reservados
+    </div>
+
+    <div class="clear"> </div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    var login = function() {
+        $('#link-acceso-usuarios').click(function(){
+            $('#login-container').toggleClass('hover-login');
+            $('#link-acceso-usuarios').blur();
+            $('#link-acceso-usuarios span').toggleClass('hide');
+            $('#form-login').toggleClass('hide');
+            return false;
+        });
+    }
+    $('#login-container').blur(function(){ login(); });
+    login();
+</script>
+{% endblock %}

@@ -22,8 +22,8 @@ body {
 .bold {font-weight:600;}
 .italic {font-style:italic;}
 
-a {	color:#FC7324; text-decoration:none;	}
-a:hover, a:focus { text-decoration:underline;}
+a {	color:#AAAAAA; text-decoration:none;	}
+a:hover, a:focus { color: #FC7324; }
 a:active, a:visited { }
 
 blockquote {
@@ -56,6 +56,7 @@ ul{
 ul,ol{
   margin:0 0 1.5em 1.5em;
   padding:0;
+  list-style-type: circle;
 }
 li ul,li ol{
   padding:0;
