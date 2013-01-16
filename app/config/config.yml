@@ -13,6 +13,7 @@ framework:
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] }
     session:         ~
+    trusted_proxies: ~
 
 
 # Twig Configuration
