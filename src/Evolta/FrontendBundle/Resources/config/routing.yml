@@ -6,4 +6,4 @@ staticpage:
     pattern:  /{page}/
     defaults: { _controller: FrontendBundle:Default:static }
     requirements:
-        page: aseguradoras|comunidades|empresas|nosotros|contacto|particulares|privacidad
+        page: general|empresas|comunidades|aseguradoras|particulares|presupuestos|contacto|legal

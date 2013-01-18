@@ -1,6 +1,6 @@
 {% extends "::base.html.twig" %}
 
-{% block nav %}
+{% block header %}
 
     {% include 'FrontendBundle:Default:_login.html.twig' %}
 
@@ -9,19 +9,59 @@
 
 {% endblock %}
     
-{% block footer %}
+{% block col_left %}
+
+    <h1>{{ menu }}</h1>
+    
+    {# incluir knb menu #}
+    
     <nav class="menu">
-        <ul>
-            {#<li><a href="{{ path('homepage') }}">Inicio</a></li>#}
-            <li><a href="{{ path('staticpage', { 'page': 'nosotros'}) }}">Nosotros</a></li>
-            <li><a href="{{ path('staticpage', { 'page': 'empresas'}) }}">Empresas</a></li>
-            <li><a href="{{ path('staticpage', { 'page': 'comunidades'}) }}">Comunidades</a></li>
-            <li><a href="{{ path('staticpage', { 'page': 'aseguradoras'}) }}">Aseguradoras</a></li>
-            <li><a href="{{ path('staticpage', { 'page': 'particulares'}) }}">Particulares</a></li> 
-            <li><a href="{{ path('staticpage', { 'page': 'contacto'}) }}">Contacto</a></li>
+        <ul class="bmenu">
+            
+            {#
+            <li{% if menu == "home" %} class="menuactive" {% endif %}>
+                <a href="{{ path('staticpage', { 'page': 'homepage'}) }}">{{ 'menu.home' | trans }}</a>
+            </li>
+            #}
+            <li{% if menu == "general" %} class="menuactive" {% endif %}>
+                <a href="{{ path('staticpage', { 'page': 'general'}) }}">{{ 'menu.general' | trans }}</a>
+            </li>
+            <li{% if menu == "servicios" %} class="menuactive_withsubmenus" {% endif %}>
+                <a href="{{ path('staticpage', { 'page': 'empresas'}) }}">{{ 'menu.servicios' | trans }}</a>
+                
+                {% if menu == "servicios" %}
+                    <ul>
+                        <li{% if submenu == "empresas" %} class="menuactive" {% endif %}>
+                            <a href="{{ path('staticpage', { 'page': 'empresas'}) }}">{{ 'menu.servicios.empresas' | trans }}</a>
+                        </li>
+                        <li{% if submenu == "comunidades" %} class="menuactive" {% endif %}>
+                            <a href="{{ path('staticpage', { 'page': 'comunidades'}) }}">{{ 'menu.servicios.comunidades' | trans }}</a>
+                        </li>
+                        <li{% if submenu == "aseguradoras" %} class="menuactive" {% endif %}>
+                            <a href="{{ path('staticpage', { 'page': 'aseguradoras'}) }}">{{ 'menu.servicios.aseguradoras' | trans }}</a>
+                        </li>
+                        <li{% if submenu == "particulares" %} class="menuactive" {% endif %}>
+                            <a href="{{ path('staticpage', { 'page': 'particulares'}) }}">{{ 'menu.servicios.particulares' | trans }}</a>
+                        </li>
+                    </ul>
+                {% endif %}
+                
+            </li>
+            <li{% if menu == "presupuestos" %} class="menuactive" {% endif %}>
+                <a href="{{ path('staticpage', { 'page': 'presupuestos'}) }}">{{ 'menu.presupuestos' | trans }}</a>
+            </li>
+            <li{% if menu == "contacto" %} class="menuactive" {% endif %}>
+                <a href="{{ path('staticpage', { 'page': 'contacto'}) }}">{{ 'menu.contacto' | trans }}</a>
+            </li>
+            <li{% if menu == "legal" %} class="menuactive" {% endif %}>
+                <a href="{{ path('staticpage', { 'page': 'legal'}) }}">{{ 'menu.legal' | trans }}</a>
+            </li>
         </ul>
-        <div class="clear"> </div>
     </nav>
+
+{% endblock %}
+    
+{% block footer %}
 
     <div id="contactinfo">
         <strong>Contacto</strong><br />

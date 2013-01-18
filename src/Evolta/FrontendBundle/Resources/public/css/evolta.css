@@ -26,14 +26,18 @@ header#header #link_logo_header { float:left; }
 #login-container #form-login .textinput { width:150px; }
 
 
+
 /**********/
 /* footer */
 /**********/
-footer#footer nav.menu { margin-bottom:10px; }
-footer#footer nav.menu ul { text-align:right; margin-bottom:10px; color:#AAAAAA;}
-footer#footer nav.menu ul li { padding:0 10px; display:inline; border-right:1px dotted; color:#AAAAAA; }
-footer#footer nav.menu ul li a { font-weight:bold; color:#AAAAAA; white-space:nowrap; }
-footer#footer nav.menu ul li a:hover { color: #FC7324;}
+nav.menu {}
+nav.menu .menuactive a, nav.menu .menuactive_withsubmenus > a { color:#FC7324; }
+nav.menu .menuactive a { border-bottom:1px solid #FC7324; }
 
+
+
+/**********/
+/* footer */
+/**********/
 footer#footer #companyinfo { clear:both; margin-top:10px; font-weight:normal; color:#AAAAAA; line-height:16px; }
 footer#footer #contactinfo { clear:both; margin-top:-25px; color:#AAAAAA;}
