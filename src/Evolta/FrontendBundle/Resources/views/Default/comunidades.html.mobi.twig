@@ -1,0 +1,16 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Comunidades' %}
+{% block pageid 'comunidades' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_comunidades.png') }}" />
+    
+    <h1>Comunidades</h1>
+    
+    {% include 'FrontendBundle:Default:general_contenido.html.twig' %}
+    
+</article>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: General' %}
+{% block pageid 'general' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_general.png') }}" />
+    
+    <h1>Evolta Gestión de Servicios</h1>
+    
+    {% include 'FrontendBundle:Default:general_contenido.html.twig' %}
+
+    
+</article>
+{% endblock %}

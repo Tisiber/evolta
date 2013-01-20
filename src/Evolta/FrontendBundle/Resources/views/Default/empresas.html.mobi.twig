@@ -1,0 +1,16 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Empresas' %}
+{% block pageid 'empresas' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_empresas.png') }}" />
+    
+    <h1>Empresas</h1>
+    
+    {% include 'FrontendBundle:Default:empresas_contenido.html.twig' %}
+    
+</article>
+{% endblock %}

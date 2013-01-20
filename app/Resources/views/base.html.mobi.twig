@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>{% block title %}Evolta Gestión de Servicios{% endblock %}</title>
+
+        <meta name="description" content="{% block metadesc %}Evolta Gestión de Servicios{% endblock %}" />
+        <meta name="keywords" content="{% block metakey %}Evolta Gestión de Servicios{% endblock %}">
+
+        {% include '::_js_css.html.mobi.twig' %}
+        
+        {% block stylesheets %}{% endblock %}
+        
+    </head>
+
+    <body id="{% block pageid '' %}" class="frontend" >
+
+        <div class="container"  >
+            <header id="header" >
+                    {% block header %}{% endblock %}
+            </header>
+
+            <div class="main">
+                {% block main %}{% endblock %}
+            </div>
+
+            <footer id="footer" >
+                {% block footer %}{% endblock %}
+            </footer>
+
+        </div>
+
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+
+</html>

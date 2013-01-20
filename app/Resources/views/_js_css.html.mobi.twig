@@ -1,0 +1,23 @@
+{% if app.environment == "prod" %}
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/reset.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/general.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/mobile.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/css3.css') }}" media="screen" />
+
+    <link type="image/x-icon" rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+{% else %}
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/reset.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/general.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/mobile.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/frontend/css/css3.css') }}" media="screen" />
+
+    <link type="image/x-icon" rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        
+{% endif %}

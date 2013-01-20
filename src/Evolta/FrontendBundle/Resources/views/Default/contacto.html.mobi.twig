@@ -1,0 +1,16 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Contacto' %}
+{% block pageid 'contacto' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_contacto.png') }}" />
+    
+    <h1>Contacto</h1>
+    
+    {% include 'FrontendBundle:Default:contacto_contenido.html.twig' %}
+    
+</article>
+{% endblock %}
