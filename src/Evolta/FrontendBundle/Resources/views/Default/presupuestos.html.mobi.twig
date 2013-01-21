@@ -1,0 +1,17 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Presupuestos' %}
+{% block pageid 'presupuestos' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_presupuestos.png') }}" />
+    
+    <h1>Presupuestos</h1>
+    
+    {% include 'FrontendBundle:Default:presupuestos_contenido.html.twig' %}
+
+    
+</article>
+{% endblock %}

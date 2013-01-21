@@ -6,6 +6,13 @@
 {% block main %}
 <article>
     
+    <h1 class="servicios_h1">
+        <img class="section_icon" src="{{ asset('images/icon_' ~ submenu ~ '.png') }}" />
+        <span>{{ submenu }}</span>
+    </h1>
+    
+    <div class="clear"></div>
+    
     {% include 'FrontendBundle:Default:comunidades_contenido.html.twig' %}
     
 </article>

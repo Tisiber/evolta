@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body { font-size:15px; color:#666; }
+body { font-size:15px; color:#666; background-image:url(/images/bg_tapiz.png); }
 
 div.container { width:100%; max-width:980px; margin:0 auto; }
 div.container header#header { float:left; margin-top:10px; width:100%; }
@@ -35,7 +35,9 @@ header#header #link_logo_header { float:left; }
 /* main */
 /********/
 .main h2 { font-size:20px; border-bottom:2px solid #DDD }
-
+.main h1.servicios_h1 { margin:0; }
+.main h1.servicios_h1 .section_icon { float:left; width:90px; }
+.main h1.servicios_h1 span { float:left; margin:25px 0 0 50px; width:550px; font-size:30px; font-weight:normal; text-transform:capitalize; }
 
 
 /************/
