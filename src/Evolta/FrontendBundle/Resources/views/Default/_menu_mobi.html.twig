@@ -1,9 +1,24 @@
 <ul class="menu_mobi">
     {#<li><a href="{{ path('homepage') }}">Inicio</a></li>#}
-    <li><a href="{{ path('staticpage', { 'page': 'nosotros'}) }}">Nosotros</a></li>
-    <li><a href="{{ path('staticpage', { 'page': 'empresas'}) }}">Empresas</a></li>
-    <li><a href="{{ path('staticpage', { 'page': 'comunidades'}) }}">Comunidades</a></li>
-    <li><a href="{{ path('staticpage', { 'page': 'aseguradoras'}) }}">Aseguradoras</a></li>
-    <li><a href="{{ path('staticpage', { 'page': 'particulares'}) }}">Particulares</a></li> 
-    <li><a href="{{ path('staticpage', { 'page': 'contacto'}) }}">Contacto</a></li>
+    <li{% if menu == "general" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'general'}) }}">{{ 'menu.general' | trans }}</a>
+    </li>
+    <li{% if menu == "empresas" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'empresas'}) }}">{{ 'menu.servicios.empresas' | trans }}</a>
+    </li>
+    <li{% if menu == "comunidades" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'comunidades'}) }}">{{ 'menu.servicios.comunidades' | trans }}</a>
+    </li>
+    <li{% if menu == "aseguradoras" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'aseguradoras'}) }}">{{ 'menu.servicios.aseguradoras' | trans }}</a>
+    </li>
+    <li{% if menu == "particulares" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'particulares'}) }}">{{ 'menu.servicios.particulares' | trans }}</a>
+    </li>
+    <li{% if menu == "contacto" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'contacto'}) }}">{{ 'menu.contacto' | trans }}</a>
+    </li>
+    <li{% if menu == "legal" %} class="menuactive" {% endif %}>
+        <a href="{{ path('staticpage', { 'page': 'legal'}) }}">{{ 'menu.legal' | trans }}</a>
+    </li>
 </ul>

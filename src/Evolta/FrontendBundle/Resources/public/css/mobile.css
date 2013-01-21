@@ -23,7 +23,7 @@ div.container footer#footer { border-top:2px solid #DDD;}
 #nav_menu_top { float:right; margin-right:15px; width:210px; }
 #nav_menu_top ul { position:absolute; margin:0; padding:10px; background-color:#EDA778; }
 #nav_menu_top ul li a { display:block; padding:10px 0; width:190px; font-size:25px; font-weight:bold; color:#FFF; border-bottom:1px solid #FFF; background:transparent url("/images/arrow_right_white.png") no-repeat right center; }
-#nav_menu_top ul li a.active,
+#nav_menu_top ul li.menuactive a,
 #nav_menu_top ul li a:hover{ color:#444; border-bottom:1px solid #444; background-image:url("/images/arrow_right_black.png"); }
 
 
@@ -34,7 +34,7 @@ div.container footer#footer { border-top:2px solid #DDD;}
 #nav_menu_bottom {  }
 #nav_menu_bottom ul { margin:0; }
 #nav_menu_bottom ul li a { display:block; padding:10px 10px 10px 45px; font-size:25px; color:#AAA; text-transform:uppercase; border-bottom:2px solid #DDD; background:transparent url("/images/arrow_right_grey.png") no-repeat right center; }
-#nav_menu_bottom ul li a.active,
+#nav_menu_bottom ul li.menuactive a,
 #nav_menu_bottom ul li a:hover{ color:#AAA; background-color:#F5E7DC; background-image:none; }
 
 footer#footer #companyinfo { clear:both; margin:10px 10px 25px; font-weight:normal; color:#AAA; line-height:20x; }

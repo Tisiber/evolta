@@ -1,21 +1,26 @@
 @charset "utf-8";
 
-body {}
+body { font-size:15px; color:#666; }
 
 div.container { width:100%; max-width:980px; margin:0 auto; }
-div.container header#header { padding:10px; border-bottom:1px solid #FC7324; height:3em; }
-div.container div.main      { padding: 15px 15px 100px; min-height:400px; background: none; }
-div.container footer#footer { padding:15px; border-top:1px solid #AAAAAA;}
+div.container header#header { float:left; margin-top:10px; width:100%; }
+div.container div#col_left  { float:left; width:25%; }
+div.container div.main      { float:right; width:71%; padding: 2% 2% 100px; min-height:400px; background: none; }
+div.container footer#footer { float:left; clear:both; padding:15px; border-top:1px solid #AAAAAA;}
 
 
 
 /**********/
 /* header */
 /**********/
+#header h1 { margin-top:30px; font-weight:normal; font-size:30px; }
+#header .header_left  { float:left; width:25%; height:80px; border-bottom:1px solid #AAA; }
+#header .header_right { float:right; width:73%; height:80px; border-bottom:1px solid #AAA; }
 header#header #link_logo_header { float:left; }
 
-#login-container { position:absolute; margin-left: 790px;  margin-top:15px; padding-right:10px; width:180px; }
-#login-container.hover-login { padding-top:10px; padding-bottom:10px; margin-top:5px; background-color:#FFFFFF; }
+#login-container { position:absolute; top:40px; margin-left: 540px; padding-right:10px; width:180px; }
+#login-container a { color:#666; }
+#login-container.hover-login { padding-bottom:10px; background-color:#FFFFFF; }
 
 #login-container #link-acceso-usuarios { float:right; width:100%; text-align:right; text-decoration:none; }
 #login-container #link-acceso-usuarios:hover { text-decoration:none; }
@@ -26,11 +31,22 @@ header#header #link_logo_header { float:left; }
 #login-container #form-login .textinput { width:150px; }
 
 
+/********/
+/* main */
+/********/
+.main h2 { font-size:20px; border-bottom:2px solid #DDD }
 
-/**********/
-/* footer */
-/**********/
-nav.menu {}
+
+
+/************/
+/* nav menu */
+/************/
+div#col_left h1 { margin-bottom:20px; font-weight:normal; font-size:30px; text-transform:capitalize; }
+nav.menu { margin:30px 0 0; }
+nav.menu ul { margin:0; }
+nav.menu ul li { margin:15px 0; }
+nav.menu ul li a { font-size:17px; }
+nav.menu ul ul { margin-left:20px; }
 nav.menu .menuactive a, nav.menu .menuactive_withsubmenus > a { color:#FC7324; }
 nav.menu .menuactive a { border-bottom:1px solid #FC7324; }
 
@@ -39,5 +55,5 @@ nav.menu .menuactive a { border-bottom:1px solid #FC7324; }
 /**********/
 /* footer */
 /**********/
-footer#footer #companyinfo { clear:both; margin-top:10px; font-weight:normal; color:#AAAAAA; line-height:16px; }
-footer#footer #contactinfo { clear:both; margin-top:-25px; color:#AAAAAA;}
+footer#footer #contactinfo {}
+footer#footer #companyinfo { margin-top:10px; font-weight:normal; line-height:16px; }

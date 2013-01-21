@@ -1,0 +1,18 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Legal' %}
+{% block pageid 'legal' %}
+
+{% block main %}
+
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_legal.png') }}" />
+    
+    <h1>POLÍTICA DE PRIVACIDAD DE EVOLTA GESTION DE SERVICIOS, S.L.</h1>
+    
+    {% include 'FrontendBundle:Default:legal_contenido.html.twig' %}
+
+</article>
+{% endblock %}
+

@@ -17,9 +17,25 @@ class DefaultController extends Controller
     
     public function staticAction($page)
     {
+        $useragent = $this->getRequest()->headers->get('user-agent');
+        $view = "web";
+        if ( (stripos($useragent, "(iPhone;") !== false)
+              || (stripos($useragent, "(iPod;") !== false)
+              || (stripos($useragent, "(iPad;") !== false)
+              || (stripos($useragent, "Android") !== false)
+              || (stripos($useragent, "Symbian") !== false)
+              || (stripos($useragent, "Windows Phone OS") !== false)
+              || (stripos($useragent, "BlackBerry") !== false)
+              || (stripos($useragent, "Bada/") !== false)
+              || (stripos($useragent, "(Windows Mobile") !== false)
+        )
+        {
+            $view = "mobi";
+        }
+                
         list($menu, $submenu) = $this->configMenu($page);
         
-        return $this->render("FrontendBundle:Default:{$page}.html.twig", array(
+        return $this->render("FrontendBundle:Default:{$page}.html.{$view}.twig", array(
                 'menu' => $menu,
                 'submenu' => $submenu
         ));

@@ -2,16 +2,22 @@
 
 {% block header %}
 
-    {% include 'FrontendBundle:Default:_login.html.twig' %}
+    <div class="header_left">
+        <a id="link_logo_header" href="{{ path('homepage') }}" alt="Evolta Gestión de Servicios"><img id="logo_header" src="/images/logo.png"/></a>
+    </div>
 
-    <a id="link_logo_header" href="{{ path('homepage') }}" alt="Evolta Gestión de Servicios"><img id="logo_header" src="/images/logo.png"/></a>
-    <div class="clear"> </div>
+    <div class="header_right">
+        <h1>Evolta Gestión de Servicios</h1>
+        {% include 'FrontendBundle:Default:_login.html.twig' %}
+    </div>
+
 
 {% endblock %}
     
 {% block col_left %}
 
     <h1>{{ menu }}</h1>
+    <img class="section_icon" src="{{ asset('images/icon_' ~ menu ~ '.png') }}" />
     
     {# incluir knb menu #}
     
