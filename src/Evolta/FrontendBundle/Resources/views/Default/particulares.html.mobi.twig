@@ -1,0 +1,16 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Particulares' %}
+{% block pageid 'particulares' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_particulares.png') }}" />
+    
+    <h1>Particulares</h1>
+    
+    {% include 'FrontendBundle:Default:particulares_contenido.html.twig' %}
+    
+</article>
+{% endblock %}

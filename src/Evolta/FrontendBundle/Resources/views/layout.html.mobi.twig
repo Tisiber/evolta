@@ -1,0 +1,62 @@
+{% extends "::base.html.mobi.twig" %}
+
+{% block header %}
+
+    {% block acceso_usuario%}
+    <div id="div_accesousuarios">
+    <a id="accesousuarios" href="{{ path('staticpage', { 'page': 'acceso-usuarios'}) }}">Acceso usuarios</a>
+    {#
+    <a id="accesousuarios" href="{{ path('homepage') }}">Acceso usuarios</a>
+    #}
+    </div>
+    {% endblock %}
+
+    <a id="link_logo_header" href="{{ path('homepage') }}" alt="Evolta Gestión de Servicios">
+        <img id="logo_header" src="/images/logo.png"/>
+    </a>    
+    
+    <a href="#" id="show_menu_mobi">Menú</a>
+    <div class="clear"></div>
+    <nav id="nav_menu_top">
+         {% include 'FrontendBundle:Default:_menu_mobi.html.twig' %}
+    </nav>
+    
+    <div class="clear"> </div>
+
+{% endblock %}
+    
+{% block footer %}
+    <nav id="nav_menu_bottom">
+         {% include 'FrontendBundle:Default:_menu_mobi.html.twig' %}
+    </nav>
+
+    <div id="contactinfo">
+        <strong>Contacto</strong><br />
+         902 20 38 68<br />
+        correo@evolta.es
+    </div>
+
+    <div id="companyinfo">
+        Evolta Gestión de Servicios, S.L.
+        <br />
+        Pº Castellana 141 - 28046 Madrid
+        <br />
+        ® 2008 Todos los derechos reservados
+    </div>
+
+    <div class="clear"> </div>
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    
+    $('#nav_menu_top').addClass('hide');
+    $('#show_menu_mobi').click(function(){
+        $('#show_menu_mobi').blur();
+        $('#nav_menu_top').focus();
+        $('#nav_menu_top').toggleClass('hide');
+        return false;
+    });
+    
+</script>
+{% endblock %}

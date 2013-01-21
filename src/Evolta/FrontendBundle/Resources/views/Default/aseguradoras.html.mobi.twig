@@ -1,0 +1,16 @@
+{% extends "FrontendBundle::layout.html.mobi.twig" %}
+
+{% block title 'Evolta :: Aseguradoras' %}
+{% block pageid 'aseguradoras' %}
+
+{% block main %}
+<article>
+    
+    <img class="section_icon" src="{{ asset('images/icon_aseguradoras.png') }}" />
+    
+    <h1>Aseguradoras</h1>
+    
+    {% include 'FrontendBundle:Default:aseguradoras_contenido.html.twig' %}
+    
+</article>
+{% endblock %}
